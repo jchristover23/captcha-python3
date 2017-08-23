@@ -1,0 +1,42 @@
+#CAPTCHA PROGRAM
+#There are 5 CAPTCHA characters
+
+from string import * #import string module (ascii_letters & digits)
+import random #import random module // to choose numbers and alphabets randomly
+print("Rewrite the CAPTCHA below!")
+
+def builder(captcharesult):
+    def gc1(captcharesult):
+        return(random.choice(digits)) #generate every single character (number)
+
+    def gc2(captcharesult):
+        return(random.choice(digits))
+
+    def gc3(captcharesult): 
+        return(random.choice(ascii_letters))
+
+    def gc4(captcharesult):
+        return(random.choice(digits))
+
+    def gc5(captcharesult): #generate alphabet
+        return(random.choice(ascii_letters))
+
+    def final_captcha(captcharesult):
+        return gc1(captcharesult) + gc2(captcharesult) + gc3(captcharesult) + gc4(captcharesult) + gc5(captcharesult)
+    return final_captcha(0)
+
+def process():
+    a = (builder(0))
+    print (a)
+    response = input("Input response: ")
+    if str(a) == str(response):
+        print("CAPTCHA VALID :)")
+    else:
+        print("CAPTCHA INVALID :( PLEASE TRY AGAIN.")
+        print(" ")
+        builder(0)
+        process()
+    
+process()
+
+#Created By Jeremy Christover
