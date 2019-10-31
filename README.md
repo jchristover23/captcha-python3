@@ -1,2 +1,1 @@
-# This codes are for sharing purpose only
-# jchristover23 // psychic-barnacle
+# Simple CAPTHCA verification Python 3
